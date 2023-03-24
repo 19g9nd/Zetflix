@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.ComponentModel.DataAnnotations;
 
 namespace Zeflix
 {
@@ -23,6 +24,39 @@ namespace Zeflix
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        public bool IsValidEmail(string source)
+        {
+            return new EmailAddressAttribute().IsValid(source);
+        }
+
+        private void SignIn_Click(object sender, RoutedEventArgs e)
+        {
+            if(_Email_Textbox_.Text == "Username@gmail.com" || _Password_Textbox_.Text == "Password")
+            {
+                Console.WriteLine("Error");
+                return;
+            }
+            
+            if (_Email_Textbox_.Text.Length > 0  & IsValidEmail(_Email_Textbox_.Text)) //проверяем email
+            {
+                if (_Password_Textbox_.Text.Length > 0) // проверяем введён ли пароль         
+                {
+
+                    Console.WriteLine("OK");
+
+                }
+            }
+            else //если метод вернул false ||  длина < 0
+            {
+                Console.WriteLine("Email error");
+            }
+        }
+
+        private void _Email_Textbox__TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
