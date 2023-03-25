@@ -30,10 +30,18 @@
                 <RadioButton Content="Home"
                              Height="50"
                              Foreground="White"
-                             
+                             FontSize="18"
+                             Style="{StaticResource MenuStyle}"
+                             />
+                
+                    <RadioButton Content="Favourites"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="18"
+                             Style="{StaticResource MenuStyle}"
                              />
 
-            </StackPanel>
+                </StackPanel>
 
         </Grid>
 
