@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -24,15 +25,54 @@ namespace Zeflix
         {
             InitializeComponent();
         }
-
+        public bool IsValidEmail(string source)
+        {
+            return new EmailAddressAttribute().IsValid(source);
+        }
         private void REG_Click(object sender, RoutedEventArgs e)
         {
+            //===========================AGE CHECK===============================
             if (Convert.ToInt32(AgeBox.Text) < 18)
             {
                 string url = "https://www.google.com/search?q=%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%BA%D0%B8&rlz=1C1GCEA_enAZ906AZ906&oq=%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%BA%D0%B8&aqs=chrome..69i57j0i131i433i512j46i512j0i131i433i512j0i512j46i512j0i512l4.2055j0j7&sourceid=chrome&ie=UTF-8";
-                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = true });
+                Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = true });
                 ___Register_Button_.IsEnabled = false;
             }
+            if (Convert.ToInt32(AgeBox.Text) > 100) {
+                return;
+            }
+            //===================================================================
+           if (string.IsNullOrWhiteSpace(EmailBox.Text) & !IsValidEmail(EmailBox.Text))
+            {
+                Console.WriteLine("Email error");
+                return;
+              
+            }
+           MainWindow mainWindow = new MainWindow();
+            Hide();
+            mainWindow.ShowDialog();
+            Close();
+
+        }
+
+        private void NameBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(NameBox.Text))
+            {
+                ___Register_Button_.IsEnabled = false;
+            }
+            else ___Register_Button_.IsEnabled = true;
+
+       
+        }
+
+        private void PassBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(PassBox.Text))
+            {
+                ___Register_Button_.IsEnabled = false;
+            }
+            else ___Register_Button_.IsEnabled = true;
         }
     }
 }

@@ -20,10 +20,11 @@ namespace Zeflix
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
     public partial class MainWindow : Window
     {
+
         public List<User> Users { get; set; } = new List<User>();
-       
         public MainWindow()
         {
 
@@ -55,8 +56,9 @@ namespace Zeflix
 
                     Console.WriteLine("OK");
                     MainMovie mainMovie = new MainMovie();
-                    mainMovie.Show();
-
+                    Hide();
+                    mainMovie.ShowDialog();
+                    Close();
 
                 }
             }
@@ -74,7 +76,9 @@ namespace Zeflix
         private void Register_Click(object sender, RoutedEventArgs e)
         {
             RegisterForm registerForm = new RegisterForm();
-            registerForm.Show();
+            Hide();
+            registerForm.ShowDialog();
+            Close();
         }
     }
 }

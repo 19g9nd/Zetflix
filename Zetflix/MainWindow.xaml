@@ -28,16 +28,16 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <TextBlock x:Name="_LoginText_" HorizontalAlignment="Left" Margin="124,108,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" TextAlignment="Center" Foreground="White" FontSize="22" FontFamily="Gilroy" FontWeight="SemiBold" Width="65" >
+        <TextBlock x:Name="_LoginText_" HorizontalAlignment="Left" Margin="131,98,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" TextAlignment="Center" Foreground="White" FontSize="22" FontFamily="Gilroy" FontWeight="SemiBold" Width="65" >
 
         </TextBlock>
-        <TextBox x:Name="_Email_Textbox_" HorizontalAlignment="Left" Margin="170,176,0,0" TextWrapping="Wrap" Text="Username@gmail.com" VerticalAlignment="Top" Width="432" Height="38" FontSize="18" Background="White" Foreground="Gray" FontWeight="Normal" FontStyle="Normal" TextChanged="_Email_Textbox__TextChanged"  />
-        <TextBox x:Name="_Password_Textbox_" HorizontalAlignment="Left" Margin="170,273,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="432" Height="38" FontSize="18" Background="White" Foreground="Gray" FontWeight="Normal" FontStyle="Normal"  />
-        <Button x:Name="SigIn_Button" Content="Sign in" HorizontalAlignment="Left" Margin="170,343,0,0" VerticalAlignment="Top" FontSize="20" OpacityMask="White" Width="432" Background="#FF6E4C42" Foreground="White" Click="SignIn_Click"/>
-        <TextBlock x:Name="_EmailText_" HorizontalAlignment="Left" Margin="170,147,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" TextAlignment="Center" Foreground="White" FontSize="20" FontFamily="Gilroy" FontWeight="Regular" Width="52" />
-        <TextBlock x:Name="_PasswordText_" HorizontalAlignment="Left" Margin="170,0,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Center" TextAlignment="Center" Foreground="White" FontSize="20" FontFamily="Gilroy" FontWeight="Regular" Width="85" />
-        <Button x:Name="Register_Button_Copy" Content="Register" HorizontalAlignment="Left" Margin="170,400,0,0" VerticalAlignment="Top" FontSize="18" OpacityMask="White" Width="432" Background="#FF7B5245" Foreground="White" Click="Register_Click"/>
-        <Label Content="or" HorizontalAlignment="Left" Margin="376,366,0,0" VerticalAlignment="Top" FontSize="18" Foreground="#FF650808" Background="#00000000"/>
+        <TextBox x:Name="_Email_Textbox_" HorizontalAlignment="Left" Margin="170,158,0,0" TextWrapping="Wrap" Text="Username@gmail.com" VerticalAlignment="Top" Width="432" Height="38" FontSize="18" Background="White" Foreground="Gray" FontWeight="Normal" FontStyle="Normal" TextChanged="_Email_Textbox__TextChanged"  />
+        <TextBox x:Name="_Password_Textbox_" HorizontalAlignment="Left" Margin="170,255,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="432" Height="38" FontSize="18" Background="White" Foreground="Gray" FontWeight="Normal" FontStyle="Normal"  />
+        <Button x:Name="SigIn_Button" Content="Sign in" HorizontalAlignment="Left" Margin="170,315,0,0" VerticalAlignment="Top" FontSize="20" OpacityMask="White" Width="432" Background="#FF6E4C42" Foreground="White" Click="SignIn_Click"/>
+        <TextBlock x:Name="_EmailText_" HorizontalAlignment="Left" Margin="170,129,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" TextAlignment="Center" Foreground="White" FontSize="20" FontFamily="Gilroy" FontWeight="Regular" Width="52" />
+        <TextBlock x:Name="_PasswordText_" HorizontalAlignment="Left" Margin="170,219,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" TextAlignment="Center" Foreground="White" FontSize="20" FontFamily="Gilroy" FontWeight="Regular" Width="85" />
+        <Button x:Name="Register_Button_Copy" Content="Register" HorizontalAlignment="Left" Margin="170,380,0,0" VerticalAlignment="Top" FontSize="18" OpacityMask="White" Width="432" Background="#FF7B5245" Foreground="White" Click="Register_Click"/>
+        <Label Content="or" HorizontalAlignment="Left" Margin="373,346,0,0" VerticalAlignment="Top" FontSize="18" Foreground="#FF650808" Background="#00000000"/>
 
     </Grid>
 </Window>

@@ -22,7 +22,7 @@ namespace Zeflix
         public MainMovie()
         {
             InitializeComponent();
-            //DataContext = current user name;
+            
         }
 
 

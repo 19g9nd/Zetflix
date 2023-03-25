@@ -19,10 +19,10 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-            <TextBlock Text ="{Binding Name}"
+            <TextBlock Text ="ZEFLIX"
                   VerticalAlignment="Center"
                   HorizontalAlignment="Center"
-                       Foreground="White"
+                       Foreground="Red"
                        FontSize="22"
                        Margin="20,0,0,0"/>
             
