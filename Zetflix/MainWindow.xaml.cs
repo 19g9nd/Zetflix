@@ -23,6 +23,7 @@ namespace Zeflix
     {
         public MainWindow()
         {
+
             InitializeComponent();
         }
 
@@ -39,12 +40,15 @@ namespace Zeflix
                 return;
             }
             
-            if (_Email_Textbox_.Text.Length > 0  & IsValidEmail(_Email_Textbox_.Text)) //проверяем email
+            if (!string.IsNullOrWhiteSpace(_Email_Textbox_.Text) & IsValidEmail(_Email_Textbox_.Text)) //проверяем email
             {
-                if (_Password_Textbox_.Text.Length > 0) // проверяем введён ли пароль         
+                if (!string.IsNullOrWhiteSpace(_Password_Textbox_.Text)) // проверяем введён ли пароль         
                 {
 
                     Console.WriteLine("OK");
+                    MainMovie mainMovie = new MainMovie();
+                    mainMovie.Show();
+
 
                 }
             }
