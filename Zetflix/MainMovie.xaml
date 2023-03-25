@@ -9,15 +9,15 @@
 
     <Border Background="#FF0B213A" CornerRadius="20">
         <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width ="200"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height ="75"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height ="75"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
             <TextBlock Text ="ZEFLIX"
                   VerticalAlignment="Center"
@@ -25,7 +25,7 @@
                        Foreground="Red"
                        FontSize="22"
                        Margin="20,0,0,0"/>
-            
+
             <StackPanel Grid.Row = "1">
                 <RadioButton Content="Home"
                              Height="50"
@@ -33,8 +33,8 @@
                              FontSize="18"
                              Style="{StaticResource MenuStyle}"
                              />
-                
-                    <RadioButton Content="Favourites"
+
+                <RadioButton Content="Favourites"
                              Height="50"
                              Foreground="White"
                              FontSize="18"
@@ -56,9 +56,24 @@
                              />
 
             </StackPanel>
+            <TextBox Width ="250"
+                     Height="40" 
+                     VerticalContentAlignment="Center" 
+                     Margin="5"
+                     Grid.Column="1"
+                        Style="{StaticResource SearchTextBox}"/>
+
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10">
+                <TextBlock Text="Most Watched"
+                           Foreground="White"
+                           FontSize="20" Margin="10,245,490,218"/>
+            </ContentControl>
+            <StackPanel/>
 
         </Grid>
 
-        
-  </Border>
+
+    </Border>
 </Window>

@@ -29,7 +29,7 @@
 
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="True">
-                <Setter Property="Background" Value="Wheat"/>
+                <Setter Property="Background" Value="#FF101031"/>
             </Trigger>
 
         </Style.Triggers>
