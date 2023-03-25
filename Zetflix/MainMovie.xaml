@@ -41,7 +41,21 @@
                              Style="{StaticResource MenuStyle}"
                              />
 
-                </StackPanel>
+                <RadioButton Content="Settings"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="18"
+                             Style="{StaticResource MenuStyle}"
+                             />
+
+                <RadioButton Content="Exit"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="18"
+                             Style="{StaticResource MenuStyle}"
+                             />
+
+            </StackPanel>
 
         </Grid>
 

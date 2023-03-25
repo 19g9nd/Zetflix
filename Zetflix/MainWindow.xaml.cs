@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.ComponentModel.DataAnnotations;
+using System.IO;
 
 namespace Zeflix
 {
@@ -21,10 +22,14 @@ namespace Zeflix
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<User> Users { get; set; } = new List<User>();
+       
         public MainWindow()
         {
 
             InitializeComponent();
+            User u1 = new User("Lotte", "guzmanbentley@ginkle.com","&L87j5");//хотела сделать через десериализацию json, но не смогла
+            Users.Add(u1);
         }
 
         public bool IsValidEmail(string source)
@@ -42,7 +47,10 @@ namespace Zeflix
             
             if (!string.IsNullOrWhiteSpace(_Email_Textbox_.Text) & IsValidEmail(_Email_Textbox_.Text)) //проверяем email
             {
-                if (!string.IsNullOrWhiteSpace(_Password_Textbox_.Text)) // проверяем введён ли пароль         
+                if ( (!string.IsNullOrWhiteSpace(_Password_Textbox_.Text))
+                    & Users.Any(u => String.Equals(u.Email, _Email_Textbox_.Text))
+                    & Users.Any(u => String.Equals(u.Password, _Password_Textbox_.Text))
+                    )// проверяем введён ли пароль         
                 {
 
                     Console.WriteLine("OK");
@@ -61,6 +69,12 @@ namespace Zeflix
         private void _Email_Textbox__TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Register_Click(object sender, RoutedEventArgs e)
+        {
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.Show();
         }
     }
 }
