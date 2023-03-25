@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,15 +20,34 @@ namespace Zeflix
     /// </summary>
     public partial class MainMovie : Window
     {
+        public ObservableCollection<MovieData> Movies { get; set; } = new ObservableCollection<MovieData>();
+        public ObservableCollection<MovieData> AllMovies { get; set; } = new ObservableCollection<MovieData>();
+        private void FilterBy(IEnumerable<Func<MovieData, bool>> filters)
+        {
+            this.Movies.Clear();
+
+            var founds = this.AllMovies.Where(u => filters.All(p => p.Invoke(u)));
+
+            foreach (var found in founds)
+            {
+                this.Movies.Add(found);
+            }
+        }
+        
         public MainMovie()
         {
             InitializeComponent();
-            
+            this.DataContext = this;
+
+            foreach (var movie in AllMovies)
+            {
+                AllMovies.Add(movie);
+                Movies.Add(movie);
+            }
+
         }
 
-
     }
-
 }
 
 
