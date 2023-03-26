@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Avengers",
+    "BitmapImage": "/image.jpg"
+
+  },
+
+  {
+    "title": "Star Wars",
+    "BitmapImage": "/image2.jpg"
+
+  },
+
+  {
+    "title": "Uncharted",
+    "BitmapImage": "/image3.jpg"
+
+  },
+  {
+    "title": "The last of us",
+    "BitmapImage": "/image4.jpg"
+
+  }
+]
