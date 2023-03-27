@@ -24,6 +24,10 @@
             Image = image;
             GENRE = genre;
         }
+
+        public override string ToString() {
+            return this.Title;
+        }
     }
 
 }

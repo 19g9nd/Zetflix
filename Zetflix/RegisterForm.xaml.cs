@@ -43,9 +43,11 @@ namespace Zeflix
                 ___Register_Button_.IsEnabled = false;
                 return;
             }
-            if (Convert.ToInt32(AgeBox.Text) > 100) {
+            
+            if (Convert.ToInt32(AgeBox.Text) > 100 ) {
                 return;
             }
+
             //============================EMAIL CHECK===================================
            if (string.IsNullOrWhiteSpace(EmailBox.Text) & !IsValidEmail(EmailBox.Text))
             {
@@ -55,8 +57,6 @@ namespace Zeflix
             }
             //===========================================================================
             Users.Add(new User(NameBox.Text, EmailBox.Text, PassBox.Text));
-           // var json = File.ReadAllText(@".\Resource\userDtabase.json"); 
-           // var users = JsonSerializer.Deserialize<IEnumerable<User>>(json);
             MainMovie mainMovie = new MainMovie();
             Hide();
             mainMovie.ShowDialog();

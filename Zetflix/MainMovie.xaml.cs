@@ -90,7 +90,20 @@ namespace Zeflix
             }
         }
 
-      
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e) {
+            this.Movies.Clear();
+            var founds = this.AllMovies.Where(m => m.Title == SearchBox.Text);
+            foreach (var found in founds) {
+                this.Movies.Add(found);
+            }
+        }
+
+        private void HomeClick(object sender, RoutedEventArgs e) {
+            var founds = this.AllMovies;
+            foreach (var found in founds) {
+                this.Movies.Add(found);
+            }
+        }
     }
 }
 
