@@ -9,10 +9,23 @@
 
   <ItemGroup>
     <None Remove="login-background.jpg" />
+    <None Remove="regPageBackground.jpg" />
+    <None Remove="Resource\movies.json" />
+    <None Remove="Resource\userDtabase.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\movies.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\userDtabase.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="login-background.jpg" />
+    <Resource Include="regPageBackground.jpg" />
   </ItemGroup>
 
 </Project>

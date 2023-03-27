@@ -1,24 +1,24 @@
 [
   {
-    "title": "Avengers",
-    "BitmapImage": "/image.jpg"
-
+    "Title": "Avengers",
+    "Image": "/image.jpg",
+    "Genre": 0
   },
 
   {
-    "title": "Star Wars",
-    "BitmapImage": "/image2.jpg"
-
+    "Title": "Star Wars",
+    "Image": "/image2.jpg",
+    "Genre": 1
   },
 
   {
-    "title": "Uncharted",
-    "BitmapImage": "/image3.jpg"
-
+    "Title": "Uncharted",
+    "Image": "/image3.jpg",
+    "Genre": 2
   },
   {
-    "title": "The last of us",
-    "BitmapImage": "/image4.jpg"
-
+    "Title": "The last of us",
+    "Image": "/image4.jpg",
+    "Genre": 2
   }
 ]

@@ -10,7 +10,7 @@
         <Grid.Background>
             <VisualBrush Viewbox="0.08,0.2,0.5,0.5" x:Name="vb">
                 <VisualBrush.Visual>
-                    <Image Source="/login-background.jpg" Name="bgImage">
+                    <Image Source="/regPageBackground.jpg" Name="bgImage">
                         <Image.BitmapEffect>
                             <BlurBitmapEffect KernelType="Gaussian" RenderOptions.BitmapScalingMode="HighQuality" RenderOptions.EdgeMode="Aliased"  Radius="5" />
                         </Image.BitmapEffect>
@@ -24,10 +24,10 @@
             <RowDefinition Height="231*"/>
         </Grid.RowDefinitions>
 
-        <Label Content="Name:" HorizontalAlignment="Left" Margin="64,89,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFFFE6DE" FontWeight="Bold"/>
-        <Label Content="Password:" HorizontalAlignment="Left" Margin="64,160,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFFFE6DE" FontWeight="Bold" Grid.RowSpan="2"/>
-        <Label Content="Email:" HorizontalAlignment="Left" Margin="67,14,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFFFE6DE" Grid.Row="2" FontWeight="Bold"/>
-        <Label Content="Age:" HorizontalAlignment="Left" Margin="75,73,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFFFE6DE" Grid.Row="2" FontWeight="Bold"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="64,89,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFE63800" FontWeight="Bold"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="64,160,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFE63800" FontWeight="Bold" Grid.RowSpan="2"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="67,14,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFE63800" Grid.Row="2" FontWeight="Bold"/>
+        <Label Content="Age:" HorizontalAlignment="Left" Margin="75,73,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFE63800" Grid.Row="2" FontWeight="Bold"/>
         <Button x:Name="___Register_Button_" Content="register" HorizontalAlignment="Left" Margin="247,130,0,0" VerticalAlignment="Top" Click="REG_Click" FontSize="20" Background="#FF8E382C" BorderBrush="#FFA55252" Foreground="White" Width="125" Grid.Row="2"/>
         <TextBox x:Name ="NameBox" HorizontalAlignment="Left" Margin="190,97,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="266" TextChanged="NameBox_TextChanged" FontSize="20"/>
         <TextBox x:Name ="PassBox" HorizontalAlignment="Left" Margin="190,0,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Center" Width="266" FontSize="20" TextChanged="PassBox_TextChanged" Grid.Row="1"/>

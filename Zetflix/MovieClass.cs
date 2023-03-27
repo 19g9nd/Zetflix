@@ -1,27 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media.Imaging;
-
-namespace Zeflix
+﻿namespace Zeflix
 {
+    public enum GENRE
+    {
+        horror,comedy,action
+    }
     public class MovieData
     {
-        private string _Title;
+      
         public string Title
         {
-            get { return this._Title; }
-            set { this._Title = value; }
+            get; set;
         }
 
-        private BitmapImage _ImageData;
-        public BitmapImage ImageData
+        public string Image 
+        { 
+            get; set;
+        }
+
+        public GENRE GENRE { get; set; }
+        public MovieData(string title, string image, GENRE genre)
         {
-            get { return this._ImageData; }
-            set { this._ImageData = value; }
+            Title = title;
+            Image = image;
+            GENRE = genre;
         }
-
     }
+
 }
